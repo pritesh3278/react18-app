@@ -31,8 +31,6 @@ function Student() {
         .then(res => {
 
         alert(res.data.message);
-        //navigate('/students')
-        //setLoading(false);
         thisClicked.closest("tr").remove();
 
         })
@@ -42,12 +40,10 @@ function Student() {
 
                 if(error.response.status === 404){
                     alert(error.response.data.message)
-                    //setLoading(false);
                     thisClicked.innerText = "Delete";
                 }
                 if(error.response.status === 500){
                     alert(error.response.data)
-                   // setLoading(false);
                 }
             }
 
